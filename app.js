@@ -103,7 +103,13 @@ console.log('=======================started=============================')
 });
 
 app.use('/payload', function(){
-  console.log('change received');
+  const { execFile } = require('child_process');
+  const child = execFile('bash', ['./script.sh'], (error, stdout, stderr) => {
+    if (error) {
+      throw error;
+    }
+    console.log(stdout);
+  });
 })
 
 app.use('/verfyMessage', function (req, res) {
