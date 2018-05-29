@@ -1,0 +1,35 @@
+<body>
+  <h1>
+  </h1>
+  <form name="form1" method="POST" action="/verfyMessage">
+    <table>
+      <tr>
+        <td>Enter UserName</td>
+        <td>
+          <input type="text" name="uname" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Enter Signed Message</td>
+        <td>
+          <input type="text" name="signmessage" required>
+        </td>
+      </tr>
+      <tr>
+        <tr>
+          <td>Enter address</td>
+          <td>
+            <input type="text" name="address" required>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="Save">
+          </td>
+        </tr>
+    </table>
+  </form>
+  <div>
+    <h3><%= message %></h3>
+  </div>
+</body>
