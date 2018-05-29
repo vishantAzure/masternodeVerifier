@@ -64,7 +64,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-cron.schedule('*/2 * * * *', function () {
+cron.schedule('0 0 0 * * *', function () {
 console.log('=======================started=============================')
   Routes.Update().then(function (res) {
 
