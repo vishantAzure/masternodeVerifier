@@ -102,6 +102,10 @@ console.log('====started====')
   });
 });
 
+app.use('/payload', function(){
+  console.log('change received');
+})
+
 app.use('/verfyMessage', function (req, res) {
 
   bitcoinapi.masternode().then(function (result1) {
