@@ -16,9 +16,9 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/explorerdb');
 
 var app = express();
-app.set('port', 3001);
+app.set('port', 1337);
 var server = http.createServer(app);
-server.listen(3001);
+server.listen(1337);
 server.on('error', function (error) {
   if (error.syscall !== 'listen') {
     throw error;
