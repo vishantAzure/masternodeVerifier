@@ -4,3 +4,19 @@
 
 Listening on port 1337
 Connected successfully to server
+[90mGET / [32m200 [90m106ms - 3.86kb[0m
+[90mGET /css/animate.css [32m200 [90m84ms - 23.29kb[0m
+[90mGET /css/5th.css [32m200 [90m111ms - 5.39kb[0m
+[90mGET /css/scrolling-nav.css [32m200 [90m112ms - 398b[0m
+[90mGET /vendor/bootstrap/css/bootstrap.min.css [32m200 [90m119ms - 124.36kb[0m
+[90mGET /css/ec-icon.css [32m200 [90m111ms - 1010b[0m
+[90mGET /css/styles.css [32m200 [90m113ms - 24.11kb[0m
+[90mGET /css/all-ie.css [32m200 [90m102ms - 332b[0m
+[90mGET /vendor/jquery/jquery.min.js [32m200 [90m100ms - 84.63kb[0m
+[90mGET /js/main.js [32m200 [90m28ms - 5.67kb[0m
+[90mGET /js/scrolling-nav.js [32m200 [90m31ms - 927b[0m
+[90mGET /vendor/jquery-easing/jquery.easing.min.js [32m200 [90m38ms - 2.47kb[0m
+[90mGET /vendor/bootstrap/js/bootstrap.bundle.min.js [32m200 [90m54ms - 67.83kb[0m
+[90mGET /js/wow.min.js [32m200 [90m143ms - 8.22kb[0m
+[90mGET /img/escrow-logo-footer.png [32m200 [90m152ms - 6.16kb[0m
+[90mGET /img/favico.png [32m200 [90m12ms - 1.45kb[0m

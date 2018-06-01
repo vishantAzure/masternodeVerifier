@@ -1,17 +1,13 @@
 #!/bin/bash
 
-cd "/home"
-echo "vst"
-node_port="1337"
-
 for pid in $(pgrep node)
 do
 kill -9 $pid
 done && echo "[+] PIDs Killed"
 
-sleep 1
-cd /home/vishant/explorer
+cd /home/explorer
 git pull origin master
+sleep 1
 npm start > nodeapp.log &
 echo "[+] Node App Started"
 

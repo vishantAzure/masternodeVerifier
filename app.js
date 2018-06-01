@@ -126,6 +126,9 @@ app.use('/verfyMessage', function (req, res) {
     if (status == 1) {
       return bitcoinapi.app(req, res).then(function (result2) {
 
+        console.log(result2)
+        console.log(typeof(result2))
+
         var obj = new Model({
           UserName: req.body.uname,
           EWRA: req.body.address,
@@ -134,14 +137,17 @@ app.use('/verfyMessage', function (req, res) {
         })
         try {
           Model.find({}, function (error3, result3) {
-            if (error3) return res.render("index", { "message": "Entry Failed. Try Again!" });
+            if (error3) return res.render("index", { "message": "Try Again!" });
 
             for (var i = 0; i < result3.length; i++) {
               if (result3[i].EWRA == req.body.address)
-                return res.render("index", { "message": "Entry Already Present." });
+                if(result2=='false')
+                  return res.render("index", { "message": "Verification Failed." });
+                else if(result2=='true')
+                return res.render("index", { "message": "Verification Passed." });
             }
             obj.save(function (error4) {
-              if (error4) return res.render("index", { "message": "error" });
+              if (error4) return res.render("index", { "message": "Try Again Later." });
               res.render("index", { "message": "Congrats! Your Entry Passed" });
             })
           });
