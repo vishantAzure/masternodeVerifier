@@ -21,6 +21,7 @@
     "node-cron": "^1.2.1",
     "qr-image": "~2.0.0",
     "request": "2.74.0",
+    "simple-crypto-js": "^2.0.2",
     "static-favicon": "~1.0.0",
     "xlsx-to-json": "^0.3.0"
   },

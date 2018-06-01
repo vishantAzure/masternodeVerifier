@@ -1,0 +1,6 @@
+
+> explorer@1.6.1 start /home/vishant/explorer
+> node app.js
+
+Listening on port 1337
+Connected successfully to server

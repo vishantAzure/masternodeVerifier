@@ -195,3 +195,19 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+
+
+
+
+
+
+
+// var SimpleCrypto = require("simple-crypto-js").default;
+// var _secretKey = "some-unique-key";
+// var simpleCrypto = new SimpleCrypto(_secretKey);
+// var plainText = "9c46267273a4999031c1d0f7e40b2a59203cd49427c4b9678d6c3a4de49b6052e71f6325296c4bddf71ea9e00da4e88c4d4fcbf241859d6aeb41e1714a0e";
+// var cipherText = simpleCrypto.encrypt(plainText);
+// console.log("Cipher Text   : " + cipherText);
+// var decipherText = simpleCrypto.decrypt(cipherText);
+// console.log("... and then decryption...");
+// console.log("Decipher Text : " + decipherText);
