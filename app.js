@@ -69,7 +69,7 @@ console.log('=======================started=============================')
   Routes.Update().then(function (res) {
 
     Model.find({}, function (err, docs) {
-      if (err) return res.render("index", { "message": err });
+      if (err) return console.log(err)
 
       bitcoinapi.masternode().then(function (result) {
 
@@ -85,7 +85,7 @@ console.log('=======================started=============================')
                   , options = {};
 
                 Model.update(conditions, update, options, function (err1, data1) {
-                  if (err) console.log(err1);
+                  if (err) return console.log(err1);
                   console.log('updated');
                 });
               }
@@ -98,7 +98,7 @@ console.log('=======================started=============================')
       })
     })
   }).catch(function (error) {
-    console.log(error)
+    return console.log(error)
   });
 });
 
@@ -134,15 +134,15 @@ app.use('/verfyMessage', function (req, res) {
         })
         try {
           Model.find({}, function (error3, result3) {
-            if (error3) return res.render("index", { "message": "error" });
+            if (error3) return res.render("index", { "message": "Entry Failed. Try Again!" });
 
             for (var i = 0; i < result3.length; i++) {
               if (result3[i].EWRA == req.body.address)
-                return res.render("index", { "message": result2 });
+                return res.render("index", { "message": "Entry Already Present." });
             }
             obj.save(function (error4) {
               if (error4) return res.render("index", { "message": "error" });
-              res.render("index", { "message": result2 });
+              res.render("index", { "message": "Congrats! Your Entry Passed" });
             })
           });
         } catch (e) {
@@ -150,10 +150,10 @@ app.use('/verfyMessage', function (req, res) {
         }
       })
     } else {
-      res.render("index", { "message": "masternode is offline" });
+      res.render("index", { "message": "Masternode is Offline" });
     }
   }).catch(function (error1) {
-    return res.render("index", { "message": error1 });
+    return res.render("index", { "message": "Something Went Wrong, Please Try Again!" });
   });
 
 });
