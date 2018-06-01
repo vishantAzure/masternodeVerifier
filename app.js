@@ -128,7 +128,6 @@ app.use('/verfyMessage', function (req, res) {
 
         console.log(result2)
         console.log(typeof(result2))
-        console.log('hii')
 
         var obj = new Model({
           UserName: req.body.uname,
