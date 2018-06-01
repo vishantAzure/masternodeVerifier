@@ -142,9 +142,9 @@ app.use('/verfyMessage', function (req, res) {
 
             for (var i = 0; i < result3.length; i++) {
               if (result3[i].EWRA == req.body.address)
-                if(result2=='false')
+                if(result2==false)
                   return res.render("index", { "message": "Verification Failed." });
-                else if(result2=='true')
+                else if(result2==true)
                 return res.render("index", { "message": "Verification Passed." });
             }
             obj.save(function (error4) {
